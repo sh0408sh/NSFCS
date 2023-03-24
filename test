@@ -1,0 +1,14 @@
+import requests
+
+url = "https://fidelity-investments.p.rapidapi.com/v3/auto-complete"
+
+querystring = {"q":"apple"}
+
+headers = {
+	"X-RapidAPI-Key": "06ac5ca0e8msh54d5b1db003ae49p10733bjsn41a386c3dcc4",
+	"X-RapidAPI-Host": "fidelity-investments.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
